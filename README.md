@@ -1,51 +1,51 @@
 # Tahoe
 
-Tahoe 是一个基于 Zig 语言开发的轻量级 JavaScript 运行时环境，集成了 Apple 的 JavaScriptCore 引擎。
+Tahoe is a lightweight JavaScript runtime environment built with Zig, integrating Apple's JavaScriptCore engine.
 
-## 特性
+## Features
 
-- 🚀 **高性能**: 基于 Zig 语言的内存安全和性能优势
-- 🔧 **JavaScriptCore 集成**: 使用 Apple 成熟的 JavaScript 引擎
-- 🖥️ **跨平台**: 支持 macOS 平台（可扩展到其他平台）
-- 📝 **Console 支持**: 完整的 console.log 输出功能
-- 🔒 **内存安全**: Zig 语言的内存管理保证运行时安全
+- 🚀 **High Performance**: Built on Zig's memory safety and performance advantages
+- 🔧 **JavaScriptCore Integration**: Uses Apple's mature JavaScript engine
+- 🖥️ **Cross-Platform**: Supports macOS (extensible to other platforms)
+- 📝 **Console Support**: Full console.log output functionality
+- 🔒 **Memory Safe**: Zig's memory management ensures runtime safety
 
-## 系统要求
+## System Requirements
 
-- Zig 0.14.1 或更高版本
-- macOS（用于 JavaScriptCore 框架）
+- Zig 0.14.1 or higher
+- macOS (for JavaScriptCore framework)
 - Xcode Command Line Tools
 
-## 安装和使用
+## Installation and Usage
 
-### 克隆项目
+### Clone the Project
 
 ```bash
 git clone https://github.com/KayanoLiam/Tahoe.git
 cd Tahoe
 ```
 
-### 编译项目
+### Build the Project
 
 ```bash
 zig build
 ```
 
-### 运行 JavaScript 文件
+### Run JavaScript Files
 
 ```bash
 zig build run -- your_script.js
 ```
 
-或者使用编译后的可执行文件：
+Or use the compiled executable:
 
 ```bash
 ./zig-out/bin/tahoe your_script.js
 ```
 
-## 示例
+## Example
 
-创建一个简单的 JavaScript 文件：
+Create a simple JavaScript file:
 
 ```javascript
 // hello.js
@@ -58,16 +58,16 @@ function greet(name) {
 console.log(greet("Tahoe"));
 
 var result = 2 + 3;
-console.log("计算结果:", result);
+console.log("Result:", result);
 ```
 
-运行：
+Run it:
 
 ```bash
 zig build run -- hello.js
 ```
 
-输出：
+Output:
 
 ```
 Running script: hello.js
@@ -82,67 +82,67 @@ function greet(name) {
 console.log(greet("Tahoe"));
 
 var result = 2 + 3;
-console.log("计算结果:", result);
+console.log("Result:", result);
 Hello, World!
 Hello, Tahoe!
-计算结果: 5
-JavaScript代码执行完毕!
+Result: 5
+JavaScript execution completed!
 ```
 
-## 支持的 JavaScript 功能
+## Supported JavaScript Features
 
-- ✅ 基本数据类型（数字、字符串、布尔值）
-- ✅ 变量声明和赋值
-- ✅ 函数定义和调用
-- ✅ 对象和方法
-- ✅ 控制流程（if/else、循环等）
-- ✅ console.log 输出
-- ✅ 表达式求值和返回值
+- ✅ Basic data types (numbers, strings, booleans)
+- ✅ Variable declaration and assignment
+- ✅ Function definition and invocation
+- ✅ Objects and methods
+- ✅ Control flow (if/else, loops, etc.)
+- ✅ console.log output
+- ✅ Expression evaluation and return values
 
-## 项目结构
+## Project Structure
 
 ```
 Tahoe/
-├── build.zig          # Zig 构建配置
-├── build.zig.zon      # 包管理配置
+├── build.zig          # Zig build configuration
+├── build.zig.zon      # Package management configuration
 ├── src/
-│   ├── main.zig       # 主程序入口
-│   └── root.zig       # 库根文件
-├── test.js            # 测试文件
-├── simple_test.js     # 简单测试
-├── comprehensive_test.js # 综合测试
-└── README.md          # 项目说明
+│   ├── main.zig       # Main program entry point
+│   └── root.zig       # Library root file
+├── test.js            # Test file
+├── simple_test.js     # Simple test
+├── comprehensive_test.js # Comprehensive test
+└── README.md          # Project documentation
 ```
 
-## 技术架构
+## Technical Architecture
 
-Tahoe 采用以下技术栈：
+Tahoe uses the following technology stack:
 
-- **Zig**: 系统编程语言，提供内存安全和高性能
-- **JavaScriptCore**: Apple 的 JavaScript 引擎
-- **C 互操作**: 通过 Zig 的 C 互操作功能集成 JavaScriptCore
-- **原生构建系统**: 使用 Zig 的原生构建工具
+- **Zig**: Systems programming language providing memory safety and high performance
+- **JavaScriptCore**: Apple's JavaScript engine
+- **C Interop**: JavaScriptCore integration through Zig's C interoperability
+- **Native Build System**: Uses Zig's native build tools
 
-## 开发计划
+## Development Roadmap
 
-- [ ] 添加更多 JavaScript 内置对象支持
-- [ ] 文件系统 API
-- [ ] 网络请求支持
-- [ ] 模块系统
-- [ ] 扩展到 Linux 和 Windows 平台
+- [ ] Add more JavaScript built-in object support
+- [ ] File system API
+- [ ] Network request support
+- [ ] Module system
+- [ ] Extend to Linux and Windows platforms
 
-## 贡献
+## Contributing
 
-欢迎提交 Issue 和 Pull Request！
+Issues and Pull Requests are welcome!
 
-## 许可证
+## License
 
-本项目采用 MIT 许可证。详见 [LICENSE](LICENSE) 文件。
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## 作者
+## Author
 
-尹明华
+kayano
 
 ---
 
-*Tahoe - 一个现代、安全、高性能的 JavaScript 运行时环境*
+*Tahoe - A modern, safe, and high-performance JavaScript runtime environment*
